@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Nombre del universitario">
+    <title>Práctica 4 - Etiquetas HTML</title>
+    <base href="./">
+    <link rel="icon" href="favicon.ico">
+    <style>
+        
+    </style>
+    <script>
+        
+    </script>
+</head>
+<body>
+
+<header>
+    <h1>Práctica 4: Etiquetas HTML</h1>
+    <p>Página de demostración realizada en HTML.</p>
+</header>
+
+<nav>
+    <a href="#texto">Texto</a> |
+    <a href="#listas">Listas</a> |
+    <a href="#tabla">Tabla</a> |
+    <a href="#formulario">Formulario</a> |
+    <a href="#multimedia">Multimedia</a>
+</nav>
+
+<main>
+    <section id="texto">
+        <h2>1. Texto y formato</h2>
+        <article>
+            <h3>Ejemplos de etiquetas</h3>
+            <div>
+                <p>Este es un <strong>texto importante</strong> y este está en <b>negrita</b>.</p>
+                <p>Este texto tiene <em>énfasis</em> y este está en <i>cursiva</i>.</p>
+                <p>También tenemos <u>subrayado</u>, <s>tachado</s> y <mark>resaltado</mark>.</p>
+                <p><small>Texto secundario pequeño.</small></p>
+                <p>H<sub>2</sub>O y 2<sup>3</sup> = 8.</p>
+                <p>Un <span>fragmento dentro de span</span> se mantiene en línea.</p>
+                <p>Primera línea<br>Segunda línea.</p>
+                <hr>
+                <blockquote cite="https://example.com">
+                    Esta es una cita extensa de demostración.
+                </blockquote>
+                <p>Una cita corta: <q>Aprender HTML es practicar.</q></p>
+                <p>Obra citada: <cite>Manual de HTML</cite>.</p>
+                <p>Ejemplo de código: <code>&lt;p&gt;Hola&lt;/p&gt;</code></p>
+                <pre>Texto preformateado
+con espacios y saltos respetados.</pre>
+                <p><abbr title="HyperText Markup Language">HTML</abbr> es un lenguaje de marcado.</p>
+                <p>Fecha de entrega: <time datetime="2026-10-08">08/10/2026</time>.</p>
+            </div>
+        </article>
+        <aside>
+            <h4>Dato adicional</h4>
+            <p>HTML organiza el contenido de una página web.</p>
+        </aside>
+    </section>
+
+    <section id="listas">
+        <h2>2. Listas</h2>
+        <h5>Lista no ordenada</h5>
+        <ul>
+            <li>HTML</li>
+            <li>Etiquetas</li>
+            <li>Atributos</li>
+        </ul>
+
+        <h5>Lista ordenada</h5>
+        <ol>
+            <li>Abrir el editor</li>
+            <li>Escribir el código</li>
+            <li>Guardar como .html</li>
+        </ol>
+
+        <h6>Lista de definiciones</h6>
+        <dl>
+            <dt>HTML</dt>
+            <dd>Lenguaje de marcado para estructurar páginas web.</dd>
+            <dt>Navegador</dt>
+            <dd>Programa que interpreta y muestra documentos web.</dd>
+        </dl>
+    </section>
+
+    <section>
+        <h2>3. Enlaces e imágenes</h2>
+        <p><a href="https://www.google.com" target="_blank">Visitar Google</a></p>
+
+        <figure>
+            <picture>
+                <source srcset="imagen.webp" type="image/webp">
+                <img src="imagen.jpg" alt="Imagen de ejemplo" width="300" usemap="#mapaEjemplo">
+            </picture>
+            <figcaption>Figura de ejemplo para la práctica.</figcaption>
+        </figure>
+
+        <map name="mapaEjemplo">
+            <area shape="rect" coords="0,0,150,150" href="https://www.google.com" alt="Zona 1">
+            <area shape="rect" coords="150,0,300,150" href="https://www.wikipedia.org" alt="Zona 2">
+        </map>
+    </section>
+
+    <section id="tabla">
+        <h2>4. Tabla</h2>
+        <table border="1">
+            <caption>Ejemplo de estudiantes</caption>
+            <colgroup>
+                <col span="1">
+                <col span="2">
+            </colgroup>
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Carrera</th>
+                    <th>Nota</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Ana</td>
+                    <td>Sistemas</td>
+                    <td>90</td>
+                </tr>
+                <tr>
+                    <td>Luis</td>
+                    <td>Sistemas</td>
+                    <td>85</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="2">Promedio</td>
+                    <td>87.5</td>
+                </tr>
+            </tfoot>
+        </table>
+    </section>
+
+    <section id="formulario">
+        <h2>5. Formulario</h2>
+        <form action="#" method="get">
+            <fieldset>
+                <legend>Datos personales</legend>
+
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" list="nombres">
+                <datalist id="nombres">
+                    <option value="Ana">
+                    <option value="Carlos">
+                    <option value="María">
+                </datalist>
+                <br><br>
+
+                <label for="mensaje">Mensaje:</label><br>
+                <textarea id="mensaje" name="mensaje" rows="4" cols="35"></textarea>
+                <br><br>
+
+                <label for="carrera">Carrera:</label>
+                <select id="carrera" name="carrera">
+                    <optgroup label="Tecnología">
+                        <option value="sistemas">Ingeniería de Sistemas</option>
+                        <option value="informatica">Informática</option>
+                    </optgroup>
+                    <optgroup label="Otras">
+                        <option value="civil">Ingeniería Civil</option>
+                    </optgroup>
+                </select>
+                <br><br>
+
+                <button type="submit">Enviar</button>
+                <button type="reset">Limpiar</button>
+            </fieldset>
+        </form>
+
+        <p>Resultado de ejemplo: <output>Datos listos</output></p>
+        <p>Progreso de la práctica:</p>
+        <progress value="80" max="100">80%</progress>
+        <p>Nivel de dominio:</p>
+        <meter min="0" max="100" value="75">75%</meter>
+    </section>
+
+    <section id="multimedia">
+        <h2>6. Multimedia y contenido externo</h2>
+
+        <video width="320" controls>
+            <source src="video.mp4" type="video/mp4">
+            <track src="subtitulos.vtt" kind="subtitles" srclang="es" label="Español">
+            Tu navegador no soporta video.
+        </video>
+
+        <br>
+
+        <audio controls>
+            <source src="audio.mp3" type="audio/mpeg">
+            Tu navegador no soporta audio.
+        </audio>
+
+        <p>Contenido con embed:</p>
+        <embed src="archivo.pdf" type="application/pdf" width="300" height="200">
+
+        <p>Contenido con object:</p>
+        <object data="archivo.pdf" type="application/pdf" width="300" height="200">
+            Documento PDF de ejemplo.
+        </object>
+
+        <p>Página dentro de iframe:</p>
+        <iframe src="https://example.com" width="400" height="200" title="Ejemplo de iframe"></iframe>
+    </section>
+
+    <section>
+        <h2>7. Gráficos</h2>
+        <canvas width="250" height="100">
+            Tu navegador no soporta canvas.
+        </canvas>
+
+        <svg width="250" height="120" xmlns="http://www.w3.org/2000/svg">
+            <rect x="10" y="10" width="100" height="60" fill="lightblue"></rect>
+            <circle cx="170" cy="40" r="30" fill="orange"></circle>
+            <text x="20" y="100">Ejemplo SVG</text>
+        </svg>
+    </section>
+
+    <section>
+        <h2>8. Etiquetas interactivas y de plantilla</h2>
+        <details>
+            <summary>Ver información adicional</summary>
+            <p>Este contenido se muestra al abrir details.</p>
+        </details>
+
+        <dialog open>
+            Ejemplo de cuadro de diálogo usando dialog.
+        </dialog>
+
+        <template id="plantillaEjemplo">
+            <p>Contenido guardado dentro de template.</p>
+        </template>
+
+        <slot>Contenido de respaldo para slot.</slot>
+    </section>
+</main>
+
+<footer>
+    <p>Universidad Autónoma Tomás Frías - Tecnologías Emergentes - 2026</p>
+</footer>
+
+</body>
+</html>
