@@ -1,0 +1,256 @@
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            margin: 0;
+            background-color: black;
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+     
+        .menu {
+            width: 220px;
+            height: 100vh;
+            position: fixed;
+            top: 0;
+            left: 0;
+            padding: 25px 12px;
+            border-right: 1px solid #303030;
+            background-color: black;
+        }
+        .menu h1 {
+            font-family: cursive;
+            font-size: 33px;
+            font-style: italic;
+            margin: 0 0 35px 12px;
+        }
+        .opcion {
+            display: flex;
+            align-items: center;
+            height: 52px;
+            padding: 10px 12px;
+            margin-bottom: 4px;
+            border-radius: 8px;
+            font-size: 16px;
+        }
+        .opcion .icono {
+            display: inline-block;
+            width: 35px;
+            font-size: 27px;
+            text-align: left;
+        }
+        .opcion img {
+            width: 27px;
+            height: 27px;
+            border-radius: 50%;
+            margin-right: 9px;
+        }
+        .activo {
+            background-color: #242424;
+        }
+        .aviso {
+            background-color: #ff3040;
+            font-size: 11px;
+            border-radius: 50%;
+            padding: 3px 6px;
+            margin-left: 7px;
+        }
+        .mas {
+            position: absolute;
+            bottom: 16px;
+            left: 12px;
+            right: 12px;
+        }
+
+        .principal {
+            margin-left: 220px;
+        }
+        .barra-superior {
+            height: 60px;
+            border-bottom: 1px solid #303030;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            gap: 24px;
+            padding-right: 30px;
+            font-size: 26px;
+        }
+        .barra-superior img {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+        }
+        .contenido {
+            max-width: 950px;
+            margin: auto;
+            padding: 25px 20px;
+        }
+
+        .perfil {
+            display: flex;
+            align-items: flex-start;
+            gap: 45px;
+            padding: 0 22px 25px 22px;
+        }
+        .circulo-perfil {
+            width: 170px;
+            height: 170px;
+            border-radius: 50%;
+            padding: 4px;
+            background: linear-gradient(35deg, orange, #f23370, #a700d9);
+            flex-shrink: 0;
+        }
+        .circulo-perfil img {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            border: 4px solid black;
+            object-fit: cover;
+        }
+        .datos {
+            flex: 1;
+        }
+        .fila-usuario {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 9px;
+            margin-bottom: 22px;
+        }
+        .fila-usuario h2 {
+            font-weight: normal;
+            font-size: 22px;
+            margin: 0;
+        }
+        .verificado {
+            color: #29a8ff;
+            font-size: 23px;
+            margin-right: 10px;
+        }
+        button {
+            border: none;
+            border-radius: 7px;
+            padding: 9px 15px;
+            background-color: #363636;
+            color: white;
+            font-size: 13px;
+        }
+        .seguir {
+            background-color: #0095f6;
+        }
+        .estadisticas {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 28px;
+            font-size: 15px;
+            margin-bottom: 20px;
+        }
+        .biografia {
+            font-size: 14px;
+            line-height: 1.5;
+        }
+        .biografia p {
+            margin: 4px 0;
+        }
+        .biografia a {
+            color: #a5cfff;
+        }
+
+        
+        .historias {
+            display: flex;
+            justify-content: space-between;
+            text-align: center;
+            gap: 10px;
+            padding: 0 14px 25px;
+        }
+        .historia {
+            width: 100px;
+            font-size: 13px;
+        }
+        .historia img, .nueva {
+            width: 75px;
+            height: 75px;
+            border: 1px solid #333;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+        .historia p {
+            margin: 7px 0 0;
+        }
+        .nueva {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 48px;
+            margin: auto;
+            font-weight: normal;
+        }
+
+        
+        .pestanas {
+            border-top: 1px solid #333;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 55px;
+            height: 53px;
+            font-size: 12px;
+        }
+        .pestanas span {
+            color: #999;
+        }
+        .pestanas .seleccionada {
+            height: 53px;
+            display: flex;
+            align-items: center;
+            border-top: 1px solid white;
+            color: white;
+        }
+        .publicaciones {
+            display: flex;
+            gap: 5px;
+        }
+        .publicaciones img {
+            width: calc((100% - 10px) / 3);
+            aspect-ratio: 1 / 1;
+            object-fit: cover;
+        }
+
+    
+        @media (max-width: 850px) {
+            .menu { width: 170px; }
+            .principal { margin-left: 170px; }
+            .perfil { gap: 20px; padding-left: 0; padding-right: 0; }
+            .circulo-perfil { width: 125px; height: 125px; }
+            .estadisticas { gap: 12px; }
+            .historias { gap: 0; }
+            .historia { width: 75px; }
+            .historia img, .nueva { width: 60px; height: 60px; }
+        }
+        @media (max-width: 600px) {
+            .menu { display: none; }
+            .principal { margin-left: 0; }
+            .contenido { padding: 15px 8px; }
+            .perfil { gap: 10px; }
+            .circulo-perfil { width: 85px; height: 85px; }
+            .fila-usuario h2 { font-size: 18px; }
+            .estadisticas { font-size: 12px; }
+            .historias { overflow-x: auto; }
+            .historia { min-width: 70px; }
+            .pestanas { gap: 14px; font-size: 10px; }
+        }
+    
+  
+        .circulo-perfil img { background-color: #ffe67b; }
+        .opcion img, .barra-superior img { background-color: #ffe67b; }
+        .historia img { background-color: #23283b; }
+        .publicaciones img { object-fit: contain; padding: 24px; }
+        .publicaciones img:nth-child(1) { background-color: #ffe875; }
+        .publicaciones img:nth-child(2) { background-color: #d9edf9; }
+        .publicaciones img:nth-child(3) { background-color: #f6ccac; }
